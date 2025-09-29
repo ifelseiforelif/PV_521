@@ -4,7 +4,7 @@ using namespace std;
 
 struct Test
 {
-	char n1; //1b 1b _ _ 4b 1b _ _ _
+	char n1; 
 	char n2;
 	char n4;
 	int n3;
