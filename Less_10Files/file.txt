@@ -1,0 +1,9 @@
+Name: Murka
+Age: 3
+Weight: 4.60
+Name: Murka
+Age: 4
+Weight: 3.40
+Name: Fima
+Age: 6
+Weight: 7.80
