@@ -2,6 +2,7 @@
 class Rectangle
 {
 private:
+	const char name;
 	int x;
 	int y;
 	int height;
@@ -9,6 +10,7 @@ private:
 
 public:
 	Rectangle();
+	Rectangle(int x1, int y1, int h, int w, char n);
 	Rectangle(int x1, int y1, int h, int w);
 	//геттери(акссесори) та сеттери(модіфікатори)
 	int getX();

@@ -2,7 +2,7 @@
 using namespace std;
 #include "Rectangle.h"
 
-Rectangle::Rectangle()
+Rectangle::Rectangle() :name{'A'}
 {
     x = 0;
     y = 0;
@@ -10,7 +10,15 @@ Rectangle::Rectangle()
     width = 0;
 }
 
-Rectangle::Rectangle(int x1, int y1, int h, int w)
+Rectangle::Rectangle(int x1, int y1, int h, int w, char n) :name{n}
+{
+    x = x1;
+    y = y1;
+    height = (h > 0) ? h : 0;
+    width = (w > 0) ? w : 0;
+}
+
+Rectangle::Rectangle(int x1, int y1, int h, int w) :name{'A'}
 {
     x = x1;
     y = y1;
