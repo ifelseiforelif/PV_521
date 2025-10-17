@@ -14,7 +14,7 @@ public:
 	unsigned int getINN();
 	void setName(char* n);
 	void setAge(unsigned short a);
+	void print();
 	~Human(); //ÄÅÑÒĞÓÊÒÎĞ
-
 };
 

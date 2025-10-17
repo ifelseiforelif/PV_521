@@ -10,6 +10,7 @@ Human::Human(char* n, unsigned short a, unsigned int inn) :INN{inn}
 
 Human::Human():Human::Human(nullptr,0,0)
 {
+	
 }
 
 char* Human::getName()
@@ -44,6 +45,15 @@ void Human::setName(char* n)
 void Human::setAge(unsigned short a)
 {
 	age = a;
+}
+
+void Human::print()
+{
+	std::cout << "Human: \n";
+	std::cout << getName() << std::endl;
+	std::cout << getAge() << std::endl;
+	std::cout << getINN() << std::endl;
+	std::cout << "=========================\n\n";
 }
 
 Human::~Human()
