@@ -4,6 +4,7 @@
 
 Human::Human(char* n, unsigned short a, unsigned int inn) :INN{inn}
 {
+	++counter;
 	setName(n);
 	setAge(a);
 }
@@ -55,6 +56,13 @@ void Human::print()
 	std::cout << getINN() << std::endl;
 	std::cout << "=========================\n\n";
 }
+
+int Human::getCounter()
+{
+	return counter;
+}
+
+int Human::counter = 0;
 
 Human::~Human()
 {
