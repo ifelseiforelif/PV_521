@@ -65,7 +65,7 @@ Point createPoint(int value)
 int main()
 {
 	Point p{ 3,4 };
-	//change(10, 20);
+	change(10.5, 20);
 	change(p, 20); //int -> Point
 
 	return 0;
