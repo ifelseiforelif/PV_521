@@ -1,5 +1,6 @@
-//Перевантаження операторів
+п»ї//РњРµС…Р°РЅС–Р· РџРµСЂРµРІР°РЅС‚Р°Р¶РµРЅРЅСЏ РѕРїРµСЂР°С‚РѕСЂС–РІ
 #include <iostream>
+
 using namespace std;
 class Point
 {
@@ -66,7 +67,7 @@ Point& operator+(int n, Point& obj)
 	Point p{ obj.getX() + n, obj.getY() + n };
 	return p;
 }
-//++ --, перетворення типів
+//++ --, РїРµСЂРµС‚РІРѕСЂРµРЅРЅСЏ С‚РёРїС–РІ
 
 class MyArray
 {
