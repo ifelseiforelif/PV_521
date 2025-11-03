@@ -1,7 +1,7 @@
 ﻿//Механіз Перевантаження операторів
 #include <iostream>
-
 using namespace std;
+
 class Point
 {
 private:
@@ -9,9 +9,9 @@ private:
 	int y;
 public:
 	Point() = default;
-	explicit Point(int x)
+	explicit Point(int x1)
 	{
-		this->x = x;
+		this->x = x1;
 		this->y = 0;
 	}
 	Point(int x, int y) :x{ x }, y{ y } {}
@@ -58,6 +58,32 @@ public:
 	operator bool()
 	{
 		return (this->x != 0 && this->y != 0) ? true : false;
+	}
+	Point& operator-()
+	{
+		Point p{ -this->x, -this->y };
+		return p;
+	}
+
+	Point& operator++() 
+	{
+		this->x++;
+		this->y++;
+		return *this;
+	}//префіксна форма
+	Point& operator++(int) 
+	{ 
+		Point p = *this;
+		this->x++;
+		this->y++;
+		return p;
+	}//постфіксна
+
+	Point& operator=(const Point& obj)
+	{
+		this->x = obj.x;
+		this->y = obj.y;
+		return *this;
 	}
 };
 
@@ -106,7 +132,7 @@ public:
 
 ostream& operator<<(ostream& out, const Point& obj)
 {
-	out << "X: " << obj.x << " Y: " << obj.getY();
+	out << "X: " << obj.getX() << " Y: " << obj.getY();
 	return out;
 }
 istream& operator>>(istream& in, Point& obj)
@@ -121,12 +147,37 @@ istream& operator>>(istream& in, Point& obj)
 	return in;
 }
 
+//Point& operator-(const Point& p)
+//{
+//	Point p1{ -p.getX(), -p.getY() };
+//	return p1;
+//}
+
+/*
+створіть клас Number
+в ньому поле типа int
+зробіть перевантаження операторів
+++, --, cout , cin, Number + число, число - Number
+*/
 int main()
 {
-	Point p;
+	//деструктор, КК, оператор =
+
+	Point p{ 3,4 };
+	Point p2{ 6,8 };
+	//Point p2 = p;
+	p = p2;
+	cout << p;
+	
+
+	
+	//Point p{ 14,10 };
+	//cout << ++p; //14 10
+	//cout << p; //15 11
+	/*
 	cin >> p;
 	cout << p;
-	cout << static_cast<int>(p);
+	cout << static_cast<int>(p);*/
 	/*int arr[] = { 4,5,6,9 };
 	size_t size = sizeof(arr) / sizeof(arr[0]);
 	MyArray marr1 = { arr, size };

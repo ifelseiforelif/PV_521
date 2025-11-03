@@ -1,4 +1,4 @@
-#include <iostream>
+Ôªø#include <iostream>
 using namespace std;
 
 
@@ -19,19 +19,30 @@ public:
 		}
 	}
 	Student() :Student(nullptr,0,18) {}
-	Student(const Student& obj) //ÍÓÌÒÚÛÍÚÓ ÍÓÔ≥˛‚‡ÌÌˇ
+	Student(const Student& obj) //–∫–æ–Ω—Å—Ç—Ä—É–∫—Ç–æ—Ä –∫–æ–ø—ñ—é–≤–∞–Ω–Ω—è
 	{
 		this->inn = obj.inn;
 		this->age = obj.age;
 		int size = strlen(obj.name);
 		this->name = new char[size + 1];
-		strcpy_s(this->name, size + 1, obj.name); //√À»¡Œ ≈  Œœ≤ﬁ¬¿ÕÕﬂ
+		strcpy_s(this->name, size + 1, obj.name); //–ì–õ–ò–ë–û–ö–ï –ö–û–ü–Ü–Æ–í–ê–ù–ù–Ø
 	}
 
 	void print()
 	{
 		cout << "Student. inn: " << this->inn
 			<< " age: " << this->age << endl;
+	}
+	Student& operator=(const Student& obj)
+	{
+		this->inn = obj.inn;
+		this->age = obj.age;
+		if (this->name != nullptr)
+			delete[] name;
+		int size = strlen(obj.name);
+		this->name = new char[size + 1];
+		strcpy_s(this->name, size + 1, obj.name);
+		return *this;
 	}
 	~Student()
 	{
@@ -47,8 +58,14 @@ int main()
 	cin >> name;
 	Student st1{name, 344, 18 };
 	st1.print();
-	Student st2 = st1; //ÍÓÔ≥ˇ
-	st2.print();
+	cin >> name;
+	Student st2{ name, 120, 30 };
+	st1.print();
+	st1 = st2; //operator=
+	Student st3 = st1; //–ö–ö
+	st3.print();
+	//Student st2 = st1; //–∫–æ–ø—ñ—è
+	//st2.print();
 	
 
 	return 0;
