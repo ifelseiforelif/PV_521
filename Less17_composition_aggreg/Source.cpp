@@ -6,13 +6,18 @@ class Hat
 private:
 	string color;
 public:
-	//friend class Human;
+	friend class Human;
 	Hat() = default;
 	Hat(string c) : color{ c } {}
 	string getColor() const { return color; }
 };
 class Head
 {
+private:
+	string hairColor;
+public:
+	Head() : hairColor{ "Black" } {}
+	Head(string hc) : hairColor{ hc } {}
 };
 class Human
 {
@@ -21,11 +26,12 @@ private:
 	Head head; //композиція
 	Hat* hat; //агрегація
 public:
-	//friend class Hat;
+	friend class Hat;
 	Human() : name{ "NoName" }, hat{ nullptr } {}
-	Human(string n, Hat* h) : name{ n }, hat{ h } {}
+	Human(string n, Hat* h, string color) : head{color}, name { n }, hat{ h } {}
 	void show() const
 	{
+		cout << typeid(this).name() << endl;
 		cout << "Name: " << name << endl;
 		if (hat)
 			cout << "Has a hat." << hat->getColor() << endl;
@@ -34,6 +40,11 @@ public:
 	}
 
 
+};
+class A
+{
+	class B {
+	};
 };
 
 int main()

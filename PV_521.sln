@@ -37,6 +37,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Less16_dynamic_strct", "Les
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Less17_composition_aggreg", "Less17_composition_aggreg\Less17_composition_aggreg.vcxproj", "{4A5EAC70-11DA-45AB-BA90-CD8C65D72B9F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Less18_inheritance", "Less18_inheritance\Less18_inheritance.vcxproj", "{63061D97-2382-4299-AA39-F442DC3FC092}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -181,6 +183,14 @@ Global
 		{4A5EAC70-11DA-45AB-BA90-CD8C65D72B9F}.Release|x64.Build.0 = Release|x64
 		{4A5EAC70-11DA-45AB-BA90-CD8C65D72B9F}.Release|x86.ActiveCfg = Release|Win32
 		{4A5EAC70-11DA-45AB-BA90-CD8C65D72B9F}.Release|x86.Build.0 = Release|Win32
+		{63061D97-2382-4299-AA39-F442DC3FC092}.Debug|x64.ActiveCfg = Debug|x64
+		{63061D97-2382-4299-AA39-F442DC3FC092}.Debug|x64.Build.0 = Debug|x64
+		{63061D97-2382-4299-AA39-F442DC3FC092}.Debug|x86.ActiveCfg = Debug|Win32
+		{63061D97-2382-4299-AA39-F442DC3FC092}.Debug|x86.Build.0 = Debug|Win32
+		{63061D97-2382-4299-AA39-F442DC3FC092}.Release|x64.ActiveCfg = Release|x64
+		{63061D97-2382-4299-AA39-F442DC3FC092}.Release|x64.Build.0 = Release|x64
+		{63061D97-2382-4299-AA39-F442DC3FC092}.Release|x86.ActiveCfg = Release|Win32
+		{63061D97-2382-4299-AA39-F442DC3FC092}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
